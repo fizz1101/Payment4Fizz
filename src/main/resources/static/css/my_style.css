@@ -1,0 +1,230 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the 
+ * later versions of this theme. 
+ * 
+ * We advise that you use use this CSS to override 
+ * SmartAdmin styles. 
+ * 
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ * 
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+/*logo和时间样式*/
+*{
+	font: "微软雅黑";
+}
+.smart-style-5{
+	width: 100%!important;
+	height: 100%!important;
+}
+.logo{
+	height: 80px;
+	line-height: 80px;
+}
+.time{
+	height: 80px;
+	text-align: right;
+}
+.time p{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px ;
+	color: rgba(255,255,255,0.7);
+}
+.margin5{
+	margin: 0 5px;
+}
+.red-color{background: rgba(204,0,0,1)!important;}
+.yellow-color{background: rgba(255,168,0,1)!important;}
+.green-color{background: rgba(87,202,18,1)!important;}
+.blue-color{background: rgba(0,156,255,1)!important;}
+.text-red{color:rgba(204,0,0,1);}
+.text-green{color:rgba(87,202,18,1);}
+.height_1{height: 260px;}
+.height_2{height: 240px;}
+.progress{
+	background: rgba(0,156,255,0.2)!important;
+	border: none!important;
+	border-radius:5px!important;
+	height:20px!important;
+}
+/*第一行数据样式*/
+.shadow-in{
+	border: 1px solid rgba(3,100,166,1);
+	-webkit-box-shadow:inset 0 0 10px rgba(3,100,166,1);  
+    -moz-box-shadow:inset 0 0 10px rgba(3,100,166,1);  
+    box-shadow:inset 0 0 10px rgba(3,100,166,1); 
+}
+/*line1-1*/
+.data-title{
+	padding-top: 20px;
+	width: 100%;
+	color: rgba(255,255,255,0.7);
+	font-weight: bold;
+}
+.data-style{
+	color: rgba(255,210,0,1);
+	font-size: 30px;
+	font-weight: bold;
+}
+.line-style{
+	width: 80%;
+	height: 1px;
+	margin: 0 auto;
+	background: rgba(3,100,166,0.8);
+}
+.text-yes{
+	color: rgba(255,255,255,1);
+	font-size: 12px;
+}
+.text-per{
+	font-size: 12px;
+}
+/*line1-2*/
+.color-linear{
+	border: none!important;
+	font-size: 14px!important;
+	font-family: "微软雅黑"!important;
+	color: #ffffff!important;
+	line-height: 34px!important;
+	padding-left: 10px!important;
+	background: -webkit-linear-gradient(left, rgba(4,110,182,0.8) , rgba(4,110,182,0))!important; /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(4,110,182,0.8), rgba(4,110,182,0))!important; /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(4,110,182,0.8), rgba(4,110,182,0))!important; /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(4,110,182,0.8) , rgba(4,110,182,0))!important; /* 标准的语法 */
+}
+/*line1-3*/
+.com-box{
+	width: 100%;
+	height:20px; 
+	line-height: 20px; 
+	display: block;
+	margin-top: 18px;
+}
+.TopBox{
+	 display: block;
+	 width: 20px;
+	 height: 20px;
+	 line-height: 20px;
+	 text-align: center;
+	 margin-left: 10px;
+	 padding: 0;
+	 border-radius:2px;     
+}
+.skillbar{
+	height: 20px!important;
+	background: rgba(0,156,255,0.2);
+
+}
+.shopName{
+	font-family: "微软雅黑";
+	height: 20px;
+	line-height: 20px;
+	padding: 0;
+	padding-left: 20px;
+}
+.cut {
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.per{
+	font-family: "微软雅黑";
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+}
+.skillbar-bar{
+	height: 20px!important;
+}
+/*第二行数据样式*/
+.data-style span{
+	font-size: 12px;
+}
+/*第三行数据样式*/
+.onlineList{
+	width: 20%!important; 
+	float: left!important;
+}
+.online_title{
+	padding-top: 80px;
+	width: 100%;
+	color: rgba(255,255,255,0.7);
+	font-weight: bold;
+}
+.online_data{
+	color: rgba(255,210,0,1);
+	font-size: 45px;
+	font-weight: bold;
+}
+.OnlineBox{
+	 display: block;
+	 width: 35px;
+	 height: 35px;
+	 line-height: 35px;
+	 text-align: center;
+	 padding: 0;
+	 border-radius:2px; 
+	 font-size: 16px; 
+	 margin-top: 75px;
+	 float: right;
+	 font-weight: bold;
+}
+.online_top_title{
+	width: 100%;
+	line-height: 20px;
+	padding-top: 60px;
+	padding-left: 20px;
+	color: rgba(255,255,255,0.7);
+	font-weight: bold;
+}
+.online_top_data{
+	color: rgba(255,210,0,1);
+	font-size: 30px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.online_top_data span{
+	color: rgba(255,210,0,1);
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.online_line{
+	width: 1px;
+	height: 120px;
+	margin-top: 40px;
+	background: #034e82;
+	float: right;
+}
+/*选项卡切换样式*/
+.myButton{
+	border-left: 1px solid #0262aa!important;
+	border-right: 1px solid #0262aa!important;
+	border-top: 1px solid #0262aa!important;
+	background: #000000!important;
+	margin-bottom: -2px!important;
+	z-index: 999!important;
+	position:relative!important;
+}
+.tabBotBox{
+	position:relative!important;
+	z-index: 998!important;
+	width: 100%!important;
+	overflow: hidden;
+	/*margin-top: -13px!important;*/
+	/*margin-left: -14px!important;*/
+	height:228px!important;
+	border-top: 1px solid #0262aa!important;
+	border-left: 1px solid #0262aa!important;
+	border-right: 1px solid #0262aa!important;
+	border-bottom: 1px solid #0262aa!important;
+}

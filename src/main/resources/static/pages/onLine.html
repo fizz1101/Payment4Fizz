@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+
+    <title> 敦煌智慧旅游 </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/smartadmin-skins.min.css">
+
+    <!--access style start-->
+    <link rel="stylesheet" href="../css/flowDetail.css">
+
+    <!-- SmartAdmin RTL Support  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/smartadmin-rtl.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/demo.min.css">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body class="desktop-detected pace-done smart-style-my hidden-menu">
+<div id="content">
+    <!--log和日期放置处-->
+    <div class="row">
+        <div class="logo col-xs-6 col-sm-6 col-md-6 col-lg-6"><a href="../index.html"><img src="../img/logo.png" alt="爱黄石"></a></div>
+        <div class="time col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <p class="padding-top-15" id="data"></p>
+            <p id="week"></p>
+        </div>
+    </div>
+    <!--输入控件 开始-->
+    <div class="row">
+        <div class="online_control">
+            <span class="choiceTitle">区域选择：</span>
+            <select class="select">
+            </select>
+            <!--<span class="choiceTitle">时间选择：</span>
+            <div class="calendar">
+                <i class="fa fa-calendar"></i>
+                <input class="timeInput" type="text" value="一天或者跨天,最多30天"  />
+            </div>-->
+        </div>
+    </div>
+    <!--输入控件 结束-->
+    <!--认证方式、认证终端占比 开始-->
+    <div class="row margin5">
+        <!--认证数-->
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-5">
+        	<div class="height_4">
+        		<!--<div class="jarviswidget" data-widget-editbutton="false">-->
+		            <!--<header class="color-linear">在线人数详情</header>-->
+                <a href="onLine.html"><button type="button" id="onlinePeople"  class="btn btn-default myButton">在线人数详情</button></a>
+                <a href="flowDetails.html"><button type="button" id="flowCon" class="btn btn-default comButton">流量详情</button></a>
+                <div class="tabBotBox">
+		            <div id="GDmap"  style="width: 100%; height: 800px; background: rgb(0,0,0)!important; border: none!important;">
+
+		            </div>
+                    <div id="MapResult" class="MapResult shadow-in" style="display:none;">
+                        <p class="shop_name"></p>
+                        <p class="PersonSum">在线人数 </p>
+                        <p class="FlowData"></p>
+                        <div class="shopLine"></div>
+                        <p class="PersonSum">区域内人数</p>
+                        <p class="FlowData" id="areaPeopleSum"></p>
+                    </div>
+                </div>
+		        <!--</div>    -->
+	        </div>
+        </article>
+    </div>
+    <!--认证方式、认证终端占比 结束-->
+
+</div>
+
+<!--================================================== -->
+
+<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="../plugins/plugin/pace/pace.min.js"></script>
+
+<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+<script src="../plugins/libs/jquery-2.1.1.min.js"></script>
+
+<script src="../plugins/libs/jquery-ui-1.10.3.min.js"></script>
+
+<!-- IMPORTANT: APP CONFIG -->
+<script src="../plugins/app.config.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="../plugins/bootstrap/bootstrap.min.js"></script>
+
+<!--[if IE 8]>
+
+<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+<![endif]-->
+
+<!--echarts-->
+<script src="../plugins/plugin/echarts/echarts.min.js"></script>
+
+<!--gis地图插件-->
+<script src="../plugins/D3/d3.min.js"></script>
+<script src="../plugins/gis/EwifiGis.js"></script>
+<!--<script src="../plugins/gis/EwifiGis.min.js"></script>-->
+<script src="../plugins/gis/DH.js"></script>
+
+
+<script type="text/javascript">   
+////	在SVG中加入点
+//     	var ewifiGis = new EwifiGis();
+//   		ewifiGis.init("GDmap");
+//		option =
+//		    {
+//		        "MAP": {
+//		            "mapName": "EwifiMap",    //地图名称
+//		            "mapType": "Custom",      //地图类型
+//		            "isDrag": "true",         //是否拖拽
+//		            "isZoom": "true",
+//		            "isCentered": "false"
+//		        },
+//		        "point" :
+//		        [
+//		            {
+//		                "id":"point_1",
+//		                "lng": "850" ,
+//		                "lat": "345",
+//		                "style":{
+//		                    "pointPath" : "#xjwifi",
+//		                    "width" : "50",
+//		                    "height" : "50",
+//		                    "opacity" : "",
+//		                    "fill" : "red"
+//		                }
+//		            },
+//		        ],
+//		    };
+//		var ewifiGis = new EwifiGis();
+//		ewifiGis.init("GDmap");
+//		ewifiGis.setOption(option);
+//		ewifiGis.execute();
+//
+////	点的鼠标事件
+//	function onLoad(){
+//        var point1 = document.getElementById("point_1");
+//
+//        //		鼠标移上去的效果
+//        point1.onmousemove = showTip;
+//		function showTip(){
+//			var MapResult = document.getElementById('MapResult'); //将要弹出的层
+//			MapResult.style.display="block"; //MapResult初始状态是不可见的，设置可为可见
+//			//window.event代表事件状态，如事件发生的元素，键盘状态，鼠标位置和鼠标按钮状.
+//			//clientX是鼠标指针位置相对于窗口客户区域的 x 坐标，其中客户区域不包括窗口自身的控件和滚动条。
+//			MapResult.style.left= event.clientX-25+'px'; //鼠标目前在X轴上的位置，加10是为了向右边移动10个px方便看到内容
+//			MapResult.style.top= event.clientY-120+"px";
+//			MapResult.style.position="absolute"; //必须指定这个属性，否则div3层无法跟着鼠标动
+//			var MapResult =document.getElementById('MapResult');
+//		};
+//
+//		//		鼠标移下来的效果
+//		 point1.onmouseout = closeTip;
+//		 function closeTip(){
+//			var MapResult = document.getElementById('MapResult');
+//			MapResult.style.display="none";
+//		 }
+//    }
+//    window.onload = onLoad;
+</script>
+
+<script src="../PageJs/onLine.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+.smart-style-my{
+	background: url(../img/glass.jpg) no-repeat ;
+	width: 100%!important;
+	height: 100%!important;
+    color: #fff;
+}
+/*输入控件开始*/
+.control{
+    width: 500px;
+    height: 30px;
+    display: block;
+    margin:0 auto;
+}
+.online_control{
+	width: 250px;
+    height: 30px;
+    display: block;
+    margin:0 auto;
+}
+.control span{
+    padding:0px 10px;
+}
+.choiceTitle{
+	font-size: 12px;
+	font-family:"微软雅黑";
+	color: #ffffff;
+}
+.select{
+	font-family:"微软雅黑";
+	font-size: 12px;
+    width:120px;
+    border:1px solid #0363a4;
+    border-radius: 5px;
+    height:26px;
+    background: none;
+    line-height: 26px;
+    background:  url("../img/down.png")no-repeat 100px center !important;
+    text-indent:20px;
+    outline:none!important;
+    border-radius: 5px!important;
+    appearance:none!important;
+    -moz-appearance:none!important;
+    -webkit-appearance:none!important;
+}
+select option{
+	color: #000000;
+}
+.calendar{
+    display:inline-block;
+    border-radius:5px;
+    border:1px solid #fff;
+    height:26px;
+    line-height: 26px;
+    border:1px solid #0363a4;
+}
+.calendar i{
+	color: #0363a4;
+	padding:0px 5px;
+}
+.timeInput{
+	font-family:"微软雅黑";
+	font-size: 12px;
+    height:26px;
+    background: none;
+    border:none;
+    color: #fff;
+    width: 160px;
+}
+
+/*输入控件结束*/
+
+/*begin 选项卡那边的样式*/
+.margin5{
+	margin: 0 5px;
+}
+.shadow-in{
+	border: 1px solid rgba(3,100,166,1);
+	-webkit-box-shadow:inset 0 0 10px rgba(3,100,166,1);  
+    -moz-box-shadow:inset 0 0 10px rgba(3,100,166,1);  
+    box-shadow:inset 0 0 10px rgba(3,100,166,1); 
+}
+
+.height_4{
+	height: 840px;
+}
+.color-linear{
+	border: none!important;
+	font-size: 14px!important;
+	font-family: "微软雅黑"!important;
+	color: #ffffff!important;
+	line-height: 34px!important;
+	padding-left: 10px!important;
+	background: -webkit-linear-gradient(left, rgba(4,110,182,0.8) , rgba(4,110,182,0))!important; /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(4,110,182,0.8), rgba(4,110,182,0))!important; /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(4,110,182,0.8), rgba(4,110,182,0))!important; /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(4,110,182,0.8) , rgba(4,110,182,0))!important; /* 标准的语法 */
+}
+/*end 选项卡那边的样式*/
+
+/*begin 鼠标移上去弹出框样式*/
+.MapResult{
+	width: 250px;
+	height: auto;
+}
+.MapResult p{
+	font-family: "微软雅黑";
+    padding:2px 10px;
+}
+.shop_name{
+	color: #ffffff;
+	font-size: 16px;
+}
+.PersonSum{
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+}
+.FlowData{
+	color: #ffd200;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+.FlowData span{
+	font-size: 12px;
+}
+.shopLine{
+	width: 60%;
+	height: 1px;
+	background: #035288;
+	margin-left: 20%;
+	margin-bottom: 10px;
+}
+/*end 鼠标移上去弹出框样式*/
+
+.myButton{
+	border-left: 1px solid #0262aa!important;
+	border-right: 1px solid #0262aa!important;
+	border-top: 1px solid #0262aa!important;
+	border-bottom: none!important;
+	background: #000000!important;
+	margin-bottom: -3px!important;
+	z-index: 999!important;
+	position:relative!important;
+	color: #ffffff!important;
+}
+.comButton{
+	font-size: 12px!important;
+	font-family: "微软雅黑"!important;
+	padding: 8px 20px!important;
+	background-color: #0a0a0a!important;
+	border: none!important;
+	color: #ffffff!important;
+}
+.tabBotBox{
+	position:relative!important;
+	z-index: 998!important;
+	width: 100%!important;
+	height:auto!important;
+	border: 1px solid #0262aa!important;
+}
+.smart-style-5{
+	width: 100%!important;
+	height: 100%!important;
+}
+.logo{
+	height: 80px;
+	line-height: 80px;
+}
+.time{
+	height: 80px;
+	text-align: right;
+}
+.time p{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px ;
+	color: rgba(255,255,255,0.7);
+}

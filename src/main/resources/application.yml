@@ -1,0 +1,45 @@
+
+#数据库设置
+datasource:
+  type: com.alibaba.druid.pool.DruidDataSource
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.68:3306/bigscreen_dh?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: root
+    password: 123456
+    initialSize: 10        ##初始化连接数, 默认: 10
+    maxActive: 50     ##连接池中保留的最大连接数, 默认: 100
+    minIdle: 5          ##最小空闲连接数量, 默认: initialSize
+    testOnBorrow: true    ##访问前验证链接有效性, 默认: false
+    validationQuery: SELECT 1       ##验证数据库连接的有效性sql, 默认: null
+    validationInterval: 30000         ##验证数据库连接频率(毫秒), 默认: 30000
+    removeAbandoned: true           ##是否进行无用链接回收, 默认: false
+    removeAbandonedTimeout: 60    ##链接有效期,超时将被回收(秒), 默认: 60
+
+    
+#mybatis配置
+mybatis:
+  config-location:  classpath:mybatis-config.xml
+  mapper-locations: classpath:mappings/**/*.xml
+  type-aliases-package: com.fizz
+
+##服务配置
+server:
+  port: 8080
+  servlet-path: /payment/*
+
+
+##日志配置
+logging:
+  config: classpath:logback-spring.xml
+  path: logs
+
+##gis配置
+gis:
+  path: E:/gis
+  file_name_header: EWIFI_WIPS_
+  extName: .csv
+  interval: 60000
+
