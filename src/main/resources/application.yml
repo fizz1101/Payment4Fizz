@@ -1,4 +1,3 @@
-
 #数据库设置
 datasource:
   type: com.alibaba.druid.pool.DruidDataSource
@@ -35,11 +34,4 @@ server:
 logging:
   config: classpath:logback-spring.xml
   path: logs
-
-##gis配置
-gis:
-  path: E:/gis
-  file_name_header: EWIFI_WIPS_
-  extName: .csv
-  interval: 60000
 

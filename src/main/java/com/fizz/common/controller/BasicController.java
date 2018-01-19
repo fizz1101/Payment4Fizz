@@ -73,7 +73,6 @@ public abstract class BasicController {
 			response.setHeader("Access-Control-Allow-Origin","*");
 			response.setCharacterEncoding("utf-8");
 			response.getWriter().print(string);
-
 			return null;
 		} catch (IOException e) {
 			return null;

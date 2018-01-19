@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="plugins/libs/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-    111
+    <button type="button">提交</button>
 </body>
+<script>
+    $(function () {
+        $('button').click(function() {
+            window.location.href = "/payment/pay/order";
+        })
+    })
+</script>
 </html>
