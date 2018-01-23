@@ -24,18 +24,18 @@ public class PaymentController extends BasicController {
     private static Logger logger = LoggerFactory.getLogger(PaymentController.class);
 
     /**
-     * 订单
+     * 创建订单Form
      * @param request
      * @param response
      */
     @ResponseBody
-    @RequestMapping("/order")
-    public void order(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("/create_order_form")
+    public void orderForm(HttpServletRequest request, HttpServletResponse response) {
         JsonObject data= ParamUtils.getRequireJsonData(request);
         String orderNo = ParamUtils.getRequiredString(data, "orderNo");
         String subject = ParamUtils.getRequiredString(data, "orderNo");
         Double amount = ParamUtils.getRequiredDouble(data, "amount");
-        String form = AlipayUtil.createorder(orderNo, subject, amount);
+        String form = AlipayUtil.createOrderFormPC(orderNo, subject, amount);
         renderString(response, form, "text/html;charset=utf-8");
     }
 
