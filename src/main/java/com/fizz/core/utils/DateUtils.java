@@ -85,7 +85,7 @@ public class DateUtils {
      * 格式化时间(long->String)
      * @date 2017年7月26日
      * @author 张纯真
-     * @param date
+     * @param datetime
      * @param formatStr
      * @return
      */

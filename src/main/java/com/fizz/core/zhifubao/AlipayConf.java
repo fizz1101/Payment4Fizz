@@ -37,5 +37,9 @@ public class AlipayConf {
     // 签名加密方式
     @Value("${SIGNTYPE}")
     public String SIGNTYPE = "RSA2";
+    @Value("${PAY_TIMEOUT}")
+    public Long PAY_TIMEOUT = 1800000L;
+    @Value("${FAIL_COUNT}")
+    public Integer FAIL_COUNT = 3;
 
 }

@@ -498,8 +498,7 @@ public class AlipayUtil {
      * @param params    异步通知传来的参数
      * @return
      */
-    public static String checkSign(String params) {
-        String flag = "failure";
+    public static boolean checkSign(String params) {
         String sign = RegexUtil.getUrlParam(params,"sign", 2);
         String[] rName = new String[] {"sign", "sign_type"};
         params = RegexUtil.removeUrlParams(params, rName);
@@ -511,21 +510,7 @@ public class AlipayUtil {
             e.printStackTrace();
             logger.error("验签接口报错：" + e);
         }
-        if(signVerified){
-            // TODO 验签成功后，按照支付结果异步通知中的描述，对支付结果中的业务内容进行二次校验，校验成功后在response中返回success并继续商户自身业务处理，校验失败返回failure
-            /**
-             * 校验参数内容有
-             * out_trade_no：是否为商户系统中创建的订单号
-             * total_amount：是否确实为该订单的实际金额
-             * seller_id：是否为这笔单据的对应的操作方
-             * app_id：是否为该商户本身
-             * trade_status: 根据该值进行后续操作
-             */
-        }else{
-            // TODO 验签失败则记录异常日志，并在response中返回failure.
-            logger.error("验签失败，url参数：" + params);
-        }
-        return flag;
+        return signVerified;
     }
 
     /**
@@ -533,8 +518,7 @@ public class AlipayUtil {
      * @param paramMap    异步通知传来的参数
      * @return
      */
-    public static String checkSignOther(Map<String, String> paramMap) {
-        String flag = "failure";
+    public static boolean checkSignOther(Map<String, String> paramMap) {
         boolean signVerified = false;
         try {
             //调用SDK验证签名
@@ -543,12 +527,7 @@ public class AlipayUtil {
             e.printStackTrace();
             logger.error(e.toString());
         }
-        if(signVerified){
-            // TODO 验签成功后，按照支付结果异步通知中的描述，对支付结果中的业务内容进行二次校验，校验成功后在response中返回success并继续商户自身业务处理，校验失败返回failure
-        }else{
-            // TODO 验签失败则记录异常日志，并在response中返回failure.
-        }
-        return flag;
+        return signVerified;
     }
 
 }

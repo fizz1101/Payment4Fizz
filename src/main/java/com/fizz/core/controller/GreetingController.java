@@ -18,9 +18,13 @@ public class GreetingController extends BasicController{
 			"/",
 			"index"
 	})
-	public String index()
-	{
+	public String indexPage() {
 		return "payment.html";
+	}
+
+	@RequestMapping("notify_page")
+	public String notifyPage() {
+		return "notify.html";
 	}
 
 }
