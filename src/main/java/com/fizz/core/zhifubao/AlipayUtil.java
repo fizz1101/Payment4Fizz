@@ -87,6 +87,8 @@ public class AlipayUtil {
         String form = "";
         try {
             form = alipayClient.pageExecute(alipayRequest).getBody();   //调用SDK生成表单
+            //仅接口测试时用
+            //form = form.substring(0, form.indexOf("<script>"));
         } catch (AlipayApiException e) {
             e.printStackTrace();
             logger.error("创建订单form(PC)报错" + e);

@@ -1,6 +1,6 @@
 package com.fizz.common.entity;
 
-import com.fizz.common.utils.IdWorker;
+import com.fizz.common.utils.SnowflakeIdFactory;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
@@ -25,7 +25,7 @@ public class BaseEntity implements Serializable{
 
     public void preInsert(){
         if (!this.isNewRecord){
-            setId(IdWorker.snowflakeId());
+            setId(SnowflakeIdFactory.snowflakeId());
         }
     }
 

@@ -6,7 +6,16 @@
     <script src="plugins/libs/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-    <button type="button">提交</button>
+    <form id="order" action="/payment/pay/create_order_form" method="get">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <input id="orderNo" name="orderNo" value="1" />
+        <input id="subject" name="subject" value="test" />
+        <input id="amount" name="amount" value="0.01" />
+        <button type="submit">提交</button>
+    </form>
 </body>
 <script>
     $(function () {
