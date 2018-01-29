@@ -4,6 +4,9 @@ import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.fizz.common.utils.SpringUtils;
 
+/**
+ * 支付宝API SDK默认实体类(单例)
+ */
 public class AlipayClientFactory {
 
     private static AlipayClient ourInstance = null;

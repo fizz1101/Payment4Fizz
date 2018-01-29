@@ -6,6 +6,9 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+/**
+ * 支付宝交易过程中存储数据集合类
+ */
 public class AlipayTradeCollection {
 
     private static Logger logger = LoggerFactory.getLogger(AlipayTradeCollection.class);

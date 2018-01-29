@@ -6,3 +6,4 @@ Payment4Fizz.iml
 # sbteclipse plugin
 target
 logs
+src/test

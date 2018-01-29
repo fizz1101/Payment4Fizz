@@ -5,6 +5,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
+/**
+ * 支付宝支付参数
+ */
 @Component
 @ConfigurationProperties(prefix = "alipay")
 @PropertySource("classpath:conf/alipay.yml")
@@ -37,8 +40,12 @@ public class AlipayConf {
     // 签名加密方式
     @Value("${SIGNTYPE}")
     public String SIGNTYPE = "RSA2";
+
+    //以下为自定义参数
+    //支付超时时间
     @Value("${PAY_TIMEOUT}")
     public Long PAY_TIMEOUT = 1800000L;
+    //请求失败次数
     @Value("${FAIL_COUNT}")
     public Integer FAIL_COUNT = 3;
 

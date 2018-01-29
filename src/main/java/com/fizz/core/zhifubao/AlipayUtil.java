@@ -35,8 +35,6 @@ public class AlipayUtil {
         alipayConf = (AlipayConf) SpringUtils.getBean("alipayConf");
     }
 
-    private static final String VERSION = "1.0";
-
     /**
      * 接口：alipay.trade.wap.pay
      * 创建订单form(手机端)

@@ -1,5 +1,8 @@
 package com.fizz.core.zhifubao;
 
+/**
+ * 支付宝订单实体
+ */
 public class AlipayOrder {
 
     private String out_order_no;
