@@ -506,9 +506,12 @@ public class AlipayUtil {
         try {
             //调用SDK验证签名
             signVerified = AlipaySignature.rsaCheck(params, sign, alipayConf.ALIPAY_PUBLIC_KEY, alipayConf.CHARSET, alipayConf.SIGNTYPE);
+            if (!signVerified) {
+                logger.error("支付宝通知签名错误");
+            }
         } catch (AlipayApiException e) {
             e.printStackTrace();
-            logger.error("验签接口报错：" + e);
+            logger.error("支付宝验签接口报错：" + e);
         }
         return signVerified;
     }

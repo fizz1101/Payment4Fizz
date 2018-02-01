@@ -118,6 +118,13 @@
             <version>1.1.1</version>
         </dependency>
 
+        <!-- 微信支付API SDK -->
+        <dependency>
+            <groupId>com.github.wxpay</groupId>
+            <artifactId>WXPay-SDK-Java</artifactId>
+            <version>0.0.4</version>
+        </dependency>
+
 
         <!-- 打war包，添加servlet-api的依赖 -->
         <!--<dependency>-->
@@ -168,5 +175,13 @@
             </plugin>
         </plugins>
     </build>
+
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
 </project>
